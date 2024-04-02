@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: font1;
+    src: url(Starborn.ttf);
+}
+
+h1{
+    font-family: font1;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 8px;
+}
+
+ .cell {
+    border: 3px solid #fff;
+    border-radius: 20px;
+    background: #5d9ef3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 64px;
+    font-family: sans-serif;
+    font-size: 6em;
+    text-shadow:#00d0ad 10px 10px 10px;
+} 
+
+
+ 
+.game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   text-align: center;
+} 
+
+
+
+.dark-mode{
+    color: antiquewhite;
+    background-color: black;
+    
+}
+
+.dark-mode .cell{
+
+    background: gray;
+    text-shadow: white;
+    border: black;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 100vh;
+    margin: 0;
+    background-color: bisque;
+    transition: background-color 0.5s ease;
+    padding: 30px;
+
+}
+
+.toggle-btn{
+      display: none;  
+
+}
+
+.toggle-label{
+
+    width: 60px;
+    height: 30px;
+    background-color: azure;
+    border-radius: 115px;
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    margin: 700px;
+
+
+}
+
+.toggle-label:before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: burlywood;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.4s ease;
+}
+
+.toggle-btn:checked + .toggle-label{
+    background-color: brown;
+
+}
+
+.toggle-btn:checked + .toggle-label::before{
+    transform: translateX(30px);
+}
+
+
+
